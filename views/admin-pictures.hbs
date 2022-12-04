@@ -1,0 +1,21 @@
+<h3>Форма добавления картин</h3>
+    <form action="/admin/pictures" method="post" enctype="multipart/form-data">
+    <div class="main_picture_form_content">
+        <label for="filedata">Изображение картины</label><br>
+        <input type="file" name="filedata" /><br>
+        <label for="picture_header">Заголовок картины</label>
+        <input type="text" name="picture_header">
+        <label for="picture_description">Описание картины</label>
+        <textarea name="picture_description"></textarea>
+        <label for="picture_description">Цена картины</label>
+        <input type="text" name="picture_price">
+    </div>
+    <div class="categories">
+        <h4>Категория картины:</h4>
+        {{#each pic_cat}}
+        <input type="checkbox" name="pic_category" value="{{this.picture_category_slug}}" id="">
+        <label>{{this.picture_category_name}}</label><br />
+        {{/each}}
+    </div><br />
+    <input type="submit" value="Создать картину" />
+      </form>

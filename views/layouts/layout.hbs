@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Alime - Photography HTML Template</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/img/core-img/favicon.png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/assets/style.css">
+
+</head>
+
+<body>
+   
+  {{>header foo=res.locals.isUserAuth}}
+
+  {{{body}}}
+
+  {{>footer}}
+
+    <!-- **** All JS Files ***** -->
+    <!-- jQuery 2.2.4 -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <!-- Popper -->
+    <script src="/assets/js/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <!-- All Plugins -->
+    <script src="/assets/js/alime.bundle.js"></script>
+    <!-- Active -->
+    <script src="/assets/js/default-assets/active.js"></script>
+
+    <script>
+          let el = document.querySelectorAll('.ame-link > a')
+          let url = document.location.href
+            for(i=0; i<el.length; i++) {
+            if(el[i].href == url){
+              el[i].parentNode.className += ' active'
+            }
+          }
+        </script>
+
+</body>
+
+</html>

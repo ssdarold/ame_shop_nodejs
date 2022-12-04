@@ -1,0 +1,84 @@
+<!-- Welcome Area Start -->
+    <section class="welcome-area">
+        <div class="welcome-slides owl-carousel">
+
+            {{#each slider}}
+
+            <!-- Single Slide -->
+            <div class="single-welcome-slide bg-img bg-overlay" style="background-image: url(/assets/img/bg-img/{{this.slider_picture}});">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <!-- Welcome Text -->
+                        <div class="col-12 col-lg-8 col-xl-6">
+                            <div class="welcome-text">
+                                <h2 data-animation="bounceInDown" data-delay="900ms">{{this.slider_header}}</h2>
+                                <p data-animation="bounceInDown" data-delay="500ms">{{this.slider_description}}</p>
+                                <div class="hero-btn-group" data-animation="bounceInDown" data-delay="100ms">
+                                    <a href="#" class="btn alime-btn mb-3 mb-sm-0 mr-4">Get a Quote</a>
+                                    <a class="hero-mail-contact" href="mailto:hello.alime@gmail.com">hello.alime@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{{/each}}
+        </div>
+    </section>
+    <!-- Welcome Area End -->
+
+    <!-- Gallery Area Start -->
+    <div class="alime-portfolio-area section-padding-80 clearfix">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Projects Menu -->
+                    <div class="alime-projects-menu">
+                        <div class="portfolio-menu text-center">
+                            <button class="btn active" data-filter="*">Все</button>
+                            {{#each pic_cat}}
+                            <button class="btn" data-filter=".{{this.picture_category_slug}}">{{this.picture_category_name}}</button>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row alime-portfolio">
+
+                {{#each pictures}}
+                <!-- Single Gallery Item -->
+                <a href="/pictures/{{this.dataValues.picture_slug}}">
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item mb-30 {{#each Picture_categories}}{{this.dataValues.picture_category_slug}} {{/each}} wow fadeInUp" data-wow-delay="100ms">
+                    <div class="single-portfolio-content">
+                        <img src="/assets/img/bg-img/{{this.dataValues.picture_image}}" alt="">
+                        <div class="hover-content">
+                        </div>
+                    </div>
+                </div>
+                </a>
+                {{/each}}
+                
+            </div>
+
+            <div class="row">
+                <div class="col-12 text-center wow fadeInUp" data-wow-delay="700ms">
+                    <a href="#" class="btn alime-btn btn-2 mt-15">View More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Gallery Area End -->
+
+    <!-- Follow Area Start -->
+    <section class="follow-area clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading text-center">
+                        <h2>Follow Instagram</h2>
+                        <p>@Alime_photographer</p>
+                    </div>
+                </div>
+            </div>
+        </div>

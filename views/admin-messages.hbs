@@ -1,0 +1,33 @@
+<h3>Входящие сообщения</h3>
+
+<style>
+    .message_item_section {
+        background-color: white;
+    }
+    .messages_wrapper_wrapper{
+        width: 100%;
+    }
+    .messages_wrapper{
+        margin: 0 auto; 
+        width: 80%;
+    }
+    .message_item{
+        display: flex; 
+        justify-content: space-between; 
+        width: 100%;
+        margin-left: 10px;
+    }
+    
+</style>
+
+<div class="messages_wrapper_wrapper">
+<div class="messages_wrapper">
+    {{#each messages}}
+    <div class="message_item">
+        <div class="message_item_section">{{this.sender_name}}</div>
+        <div class="message_item_section">{{this.sender_email}}</div>
+        <div class="message_item_section">{{this.message_text}}</div>
+    </div>
+    {{/each}}
+</div>
+</div>
